@@ -7,5 +7,9 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
 
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    resources :catagories, only: [:index, :show, :create, :new] do
+      resources :items, only: [:create, :new]
+    end
+  end
 end
