@@ -16,7 +16,7 @@
   </head>
 
   <body>
-  <div class="navbar">
+  <div class="navbar" style="display:flex;flex-direction: column; padding:0px;">
   <% if user_signed_in? %> 
       <h3><%= current_user.email %></h3>
       <%= button_to "Log out", destroy_user_session_path, method: :delete, class: 'btn' %>
