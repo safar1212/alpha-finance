@@ -1,0 +1,42 @@
+<div>
+
+
+  <nav class="dark:bg-blue-900 border-b border-gray-200">
+    <div class="sm:px-4 py-2.5 px-4 container flex flex-row justify-between items-center mx-auto">
+      <div class="flex items-center"> 
+        <%= link_to catagories_path do %>
+           <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
+      </div>      
+      <%= link_to catagory_items_path do %>
+        <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">ITEMS</span>
+      <% end %>
+      <div class="flex items-center justify-end">
+        
+        <%= link_to new_catagory_item_path do %>
+           <i class="fa-solid fa-plus"></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="w-full flex items-center bg-white sm:px-4 py-2.5 px-2">
+      <h2>Total price: <%= "$#{@total_price}" %></h2>
+    </div>
+  </nav>
+
+  <div class="mt-2 flex flex-column gap-2 px-2 w-full h-screen">
+    <% @items.each do |item| %>
+      <div class="w-full bg-white p-2 pr-4 items-center justify-between gap-2 flex">
+        <div class="flex items-center gap-2">
+          <%= item.amount %>
+          <h2 class="text-gray-800 font-sans"><%= item.name %></h2>
+        </div>
+        <%= link_to new_catagory_item_path(catagory_id: params['catagory_id']) do %>
+          <h2><%= "$#{item.amount}" %></h2>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+</div>

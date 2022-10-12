@@ -1,0 +1,25 @@
+<div>
+
+ <nav class="shadow-sm px-4 sm:px-4 dark:bg-blue-900 border-b border-gray-200 dark:border-gray-600">
+    <div class="container flex flex-row justify-between items-center mx-auto">
+      <a href="/catagories" class="flex items-center">
+        <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      </a>
+      <div class="flex items-center"></div>
+      <div class="flex items-center justify-end">
+        <input class="self-center text-lg cursor-pointer whitespace-nowrap dark:text-white" type="submit" value="Save" form="create_catagory" >
+      </div>
+    </div>
+  </nav>
+
+  <div class="w-full flex pt-2.5 h-screen">
+    <%= form_with model: @catagory, :html => {:id => "create_catagory"} do |f| %>
+      <%= f.file_field :icon, accept: 'image/png,image/gif,image/jpeg,image/jpg', required: true %>
+      <%= f.text_field :name, autocomplete: "name", placeholder: 'Name', class: "border-slate-400 w-full", required: true %>
+    <% end %>
+
+  </div>
+
+
+
+</div>

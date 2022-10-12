@@ -10,7 +10,11 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   end
 
   def after_sign_in_path_for(_resource_or_scope)
-    user_session_path
+    catagories_path
+  end
+
+  def after_sign_up_path_for(_resource_or_scope)
+    catagories_path
   end
 
 
