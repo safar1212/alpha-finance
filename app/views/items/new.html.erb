@@ -3,7 +3,9 @@
  <nav class="px-4 py-2.5 dark:bg-blue-900 shadow-sm border-b border-gray-200 dark:border-gray-600">
     <div class="container flex flex-row justify-between items-center mx-auto">
       <div class="flex items-center">
-        <%= link_to '<i class="fa-solid fa-plus"></i>', catagory_items_path %>
+        <%= link_to catagory_items_path do %>
+           <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
       </div>      
       <div class="flex items-center"></div>
       <div class="flex items-center justify-end">

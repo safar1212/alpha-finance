@@ -3,7 +3,10 @@ class ItemsController < ApplicationController
     def index
        @catagory = Catagory.find(params['catagory_id'])
        @items = Item.where(user_id: current_user.id, catagory_id: params['catagory_id']).order(created_at: :desc)
-      #  @total_price = @items.sum(:amount)
+       @total_price = 0
+       @items.each do |item|
+        @total_price += item.amount.to_i
+       end
     end
 
     def create
