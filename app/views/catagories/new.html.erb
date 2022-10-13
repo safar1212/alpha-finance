@@ -1,25 +1,18 @@
-<div>
+<div style='background-color: #3778c2; height: 100vh;'>
 
- <nav class="shadow-sm px-4 sm:px-4 dark:bg-blue-900 border-b border-gray-200 dark:border-gray-600">
-    <div class="container flex flex-row justify-between items-center mx-auto">
-      <a href="/catagories" class="flex items-center">
-        <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-      </a>
-      <div class="flex items-center"></div>
-      <div class="flex items-center justify-end">
-        <input class="self-center text-lg cursor-pointer whitespace-nowrap dark:text-white" type="submit" value="Save" form="create_catagory" >
-      </div>
-    </div>
-  </nav>
+  <div class="pt-5">
 
-  <div class="w-full flex pt-2.5 h-screen">
     <%= form_with model: @catagory, :html => {:id => "create_catagory"} do |f| %>
-      <%= f.file_field :icon, accept: 'image/png,image/gif,image/jpeg,image/jpg', required: true %>
-      <%= f.text_field :name, autocomplete: "name", placeholder: 'Name', class: "border-slate-400 w-full", required: true %>
-    <% end %>
+
+      <%= f.file_field :icon, accept: 'image/png,image/gif,image/jpeg,image/jpg' ,required: true %>
+      <%= f.text_field :name, autocomplete: "name", placeholder: 'Name', class: "border-slate-400 w-100 h-300 mb-5 mt-5 pt-3 pb-3", required: true %>
+   
+      <% end %>
+
+    <div class="flex items-center justify-end">
+          <input class=" w-100 pt-3 pb-3 text-center" style='font-weight: bold; color: #FFFFFF; background-color: #5fb523; border: none;' ,type="submit" value="SAVE" form="create_catagory" >
+    </div>
 
   </div>
-
-
 
 </div>
