@@ -1,30 +1,32 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  Itemer = Item.new(name: 'suger', amount: '4', user_id: 1, catagory_id: 2)
+  itemer = Item.new(name: 'suger', amount: '4', user_id: 1, catagory_id: 2)
 
-  before { Itemer.save }
-  it 'is valid with valid attributes' do
-    expect(Itemer).to_not be_valid
-  end
+  describe 'validations' do
+    before { itemer.save }
+    it 'is valid with valid attributes' do
+      expect(itemer).to_not be_valid
+    end
 
-  it 'is not valid without an user_id' do
-    Itemer.user_id = nil
-    expect(Itemer).to_not be_valid
-  end
+    it 'is not valid without an user_id' do
+      itemer.user_id = nil
+      expect(itemer).to_not be_valid
+    end
 
-  it 'is not valid without a catagory_id' do
-    Itemer.catagory_id = nil
-    expect(Itemer).to_not be_valid
-  end
+    it 'is not valid without a catagory_id' do
+      itemer.catagory_id = nil
+      expect(itemer).to_not be_valid
+    end
 
-  it 'is not valid without a name' do
-    Itemer.name = nil
-    expect(Itemer).to_not be_valid
-  end
+    it 'is not valid without a name' do
+      itemer.name = nil
+      expect(itemer).to_not be_valid
+    end
 
-  it 'is not valid without a amount' do
-    Itemer.amount = nil
-    expect(Itemer).to_not be_valid
+    it 'is not valid without a amount' do
+      itemer.amount = nil
+      expect(itemer).to_not be_valid
+    end
   end
 end
