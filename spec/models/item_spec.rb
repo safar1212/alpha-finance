@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  Itemer = Item.new(name: "suger", amount: "4", user_id: 1, catagory_id: 2)
+  Itemer = Item.new(name: 'suger', amount: '4', user_id: 1, catagory_id: 2)
 
   before { Itemer.save }
   it 'is valid with valid attributes' do
@@ -27,5 +27,4 @@ RSpec.describe Item, type: :model do
     Itemer.amount = nil
     expect(Itemer).to_not be_valid
   end
-
 end

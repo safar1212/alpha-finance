@@ -1,7 +1,4 @@
 class Item < ApplicationRecord
-
-
-    belongs_to :user
-    belongs_to :catagory
-    
+  belongs_to :user
+  belongs_to :catagory
 end

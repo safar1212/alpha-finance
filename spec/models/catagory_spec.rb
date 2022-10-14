@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Catagory, type: :model do
-  Catagorier = Catagory.new(name: "suger", icon: "icon", user_id: 1)
+  Catagorier = Catagory.new(name: 'suger', icon: 'icon', user_id: 1)
 
   before { Catagorier.save }
   it 'is valid with valid attributes' do
@@ -22,5 +22,4 @@ RSpec.describe Catagory, type: :model do
     Catagorier.icon = nil
     expect(Catagorier).to_not be_valid
   end
-
 end
