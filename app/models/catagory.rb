@@ -1,5 +1,5 @@
 class Catagory < ApplicationRecord
-  validates :name, presence: true, length: { maximum: 250 }
+  validates :name, presence: true, format: { with: /[a-zA-Z]/ }
   validates :icon_type
 
   mount_uploader :icon, IconUploader
