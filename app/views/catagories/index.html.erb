@@ -1,0 +1,62 @@
+<div style='background-color: #dedede; height: 100vh;'>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ps-3 pe-3 bg-gradient", style='background-color: #3778c2;'>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Alpha Finance</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"><i class="fa fa-user"></i>&nbsp;&nbsp;<%= current_user.name %></a>
+            </li>
+            <li class="nav-item">
+              <h3><%= button_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link btn btn-lg bg-danger text-light' %></h3>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class=" flex flex-col gap-2 px-2">
+    <% @catagories.each do |catagory| %>
+      <div class="w-full bg-white ps-2 pe-2 d-flex justify-content-between align-items-center m-2">
+
+        <div class="d-flex align-items-center">
+
+          <img src=<%=  "#{catagory.icon}" %> class="rounded float-start" , style='width: 60px; height: 60px; margin-right: 10px;' />
+
+          <div>
+            <h2 class="text-gray-900 text-lg font-sans"><%= catagory.name %></h2>
+            <h3 class="text-gray-600"><%= catagory.created_at.to_date %><h3>
+          </div>
+
+        </div>
+
+        <div>
+
+          <%= link_to catagory_items_path(catagory_id: catagory.id) do %>
+            <i class="fa-sharp fa-2x fa-solid fa-chevron-right"></i>
+          <% end %>
+
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+
+ 
+    <div class=" p-3 w-full flex", style='font-weight: bold;  background-color: #5fb523; bottom: 0px; position: absolute; bottom: 0px; width: 100%; text-align: center;'>
+      <%= link_to "ADD CATEGORY", new_catagory_path, class: "text-center text-white bg-gradient text-decoration-none" %>
+    </div>
+  
+
+
+
+</div>
