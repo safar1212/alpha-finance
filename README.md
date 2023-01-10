@@ -5,7 +5,7 @@
 
 This app can be used to make a budget. You can add Categories of the things, which you can use to make a proper budget for any occasion, whether that is a monthly home budget, a married budget, or any other occasion.
 
-## Welcome! 👋
+
 
 ## Live Version
 
