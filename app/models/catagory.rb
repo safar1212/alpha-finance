@@ -1,6 +1,5 @@
 class Catagory < ApplicationRecord
   validates :name, presence: true, format: { with: /[a-zA-Z]/ }
-  
 
   mount_uploader :icon, IconUploader
 
