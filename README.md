@@ -1,9 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-# alpha-finance
+# Alpha-Finance
 
 This app can be used to make a budget. You can add Categories of the things, which you can use to make a proper budget for any occasion, whether that is a monthly home budget, a married budget, or any other occasion.
+
+# Screenshots
+
+![2023-01-12_17-42-37](https://user-images.githubusercontent.com/78845635/212461230-2a47ea77-22d0-4f69-b911-28b159a0bcfb.jpg)    ![2023-01-12_18-10-02](https://user-images.githubusercontent.com/78845635/212461236-47e7fa78-478f-4b39-808e-c32de0f8b24b.jpg)
+
+![2023-01-12_22-21-54](https://user-images.githubusercontent.com/78845635/212461283-b1c7a2bf-911b-4274-a4f6-0492262343c4.jpg)    ![2023-01-12_22-23-30](https://user-images.githubusercontent.com/78845635/212461294-a22e2849-045d-4281-8962-dc4b4aabd6a9.jpg)
+
+![2023-01-12_22-23-54](https://user-images.githubusercontent.com/78845635/212461320-37a1cf9b-60e9-4488-8b74-05be11cbe773.jpg)
+
 
 
 
