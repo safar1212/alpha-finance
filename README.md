@@ -3,7 +3,7 @@
 
 # Alpha-Finance
 
-This app can be used to make a budget. You can add Categories of the things, which you can use to make a proper budget for any occasion, whether that is a monthly home budget, a married budget, or any other occasion.
+This app can be used to make a budget. You can add Categories of the things, which you can use to make a proper budget for any occasion, whether that is a monthly home budget, a married budget, or any other occasion. Moreover, in that perticuler category you can add list of items too.
 
 # Screenshots
 
