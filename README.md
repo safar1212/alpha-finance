@@ -40,7 +40,7 @@ To get a local copy up and running follow these simple example steps.
   Rails
 
 ```
-### Setup
+## Setup
 Clone the repository and change the directory to portfolio
 
 ``` 
