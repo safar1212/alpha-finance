@@ -294,8 +294,8 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   letter_opener
-  pg (~> 1.1)
-  puma (~> 5.0)
+  pg
+  puma
   rails (~> 7.0.4)
   rails-controller-testing
   rspec-rails

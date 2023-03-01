@@ -35,6 +35,4 @@ test:
 #
 production:
   <<: *default
-  database: alpha_finance_production
-  username: alpha_finance
-  password: <%= ENV["ALPHA_FINANCE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
